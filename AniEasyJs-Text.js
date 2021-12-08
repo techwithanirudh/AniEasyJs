@@ -306,3 +306,188 @@ function sum(num1, num2, num3) {
         return a + b;
     });
 }
+
+// Add a function to create a collection
+// (e.g. createCollection('foo', 'bar', 'baz') => ['foo', 'bar', 'baz'])
+function createCollection(item1, item2, item3) {
+    var args = Array.prototype.slice.call(arguments);
+    return args;
+}
+
+// Add a function to create a range
+// (e.g. createRange(1, 3) => [1, 2, 3])
+function createRange(start, end) {
+    var arr = [];
+    for (var i = start; i <= end; i++) {
+        arr.push(i);
+    }
+    return arr;
+}
+
+// Add a function to create a random number
+// (e.g. createRandomNumber(1, 3) => 2)
+function createRandomNumber(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+// Add a function to create a random string
+// (e.g. createRandomString(5) => '5f5f5f5f')
+function createRandomString(length) {
+    var chars = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    var result = '';
+    for (var i = length; i > 0; --i) {
+        result += chars[Math.floor(Math.random() * chars.length)];
+    }
+    return result;
+}
+
+// Add a function to create a random hexadecimal color
+// (e.g. createRandomHexColor() => '#f5f5f5')
+function createRandomHexColor() {
+    var chars = '0123456789abcdef';
+    var result = '#';
+    for (var i = 6; i > 0; --i) {
+        result += chars[Math.floor(Math.random() * chars.length)];
+    }
+    return result;
+}
+
+// Add a function to create a random color
+// (e.g. createRandomColor() => 'rgb(255, 255, 255)')
+function createRandomColor() {
+    var r = createRandomNumber(0, 255);
+    var g = createRandomNumber(0, 255);
+    var b = createRandomNumber(0, 255);
+    return 'rgb(' + r + ', ' + g + ', ' + b + ')';
+}
+
+// Add a function to search text
+// (e.g. searchText('foo', 'bar') => 'bar')
+function searchText(str, find) {
+    return str.search(find);
+}
+
+// Add a function to get the length of text
+// (e.g. getLength('foo') => 3)
+function getLength(str) {
+    return str.length;
+}
+
+// Add a function to get the character at a position
+// (e.g. getCharAt('foo', 1) => 'o')
+function getCharAt(str, pos) {
+    return str.charAt(pos);
+}
+
+// Add a function to make an or operation
+// (e.g. or(true, false) => true)
+function or(bool1, bool2) {
+    return bool1 || bool2;
+}
+
+// Add a function to make an and operation
+// (e.g. and(true, false) => false)
+function and(bool1, bool2) {
+    return bool1 && bool2;
+}
+
+// Add a function to make an xor operation
+// (e.g. xor(true, false) => true)
+function xor(bool1, bool2) {
+    return bool1 !== bool2;
+}
+
+// Add a function to make an not operation
+// (e.g. not(true) => false)
+function not(bool) {
+    return !bool;
+}
+
+// Add a function to make an equal operation    
+// (e.g. equal(1, 1) => true)
+function equal(num1, num2) {
+    return num1 === num2;
+}
+
+// Add a function to make an not equal operation
+// (e.g. notEqual(1, 1) => false)
+function notEqual(num1, num2) {
+    return num1 !== num2;
+}
+
+// Add a function to make an greater than operation
+// (e.g. greaterThan(1, 0) => true)
+function greaterThan(num1, num2) {
+    return num1 > num2;
+}
+
+// Add a function to make an greater than or equal operation
+// (e.g. greaterThanOrEqual(1, 1) => true)
+function greaterThanOrEqual(num1, num2) {
+    return num1 >= num2;
+}
+
+// Add a function to make an less than operation
+// (e.g. lessThan(0, 1) => true)
+function lessThan(num1, num2) {
+    return num1 < num2;
+}
+
+// Add a function to make an less than or equal operation
+// (e.g. lessThanOrEqual(1, 1) => true)
+function lessThanOrEqual(num1, num2) {
+    return num1 <= num2;
+}
+
+// Add a function to make an in operation
+// (e.g. in(1, [1, 2, 3]) => true)
+function In(num, arr) {
+    return arr.indexOf(num) !== -1;
+}
+
+// Add a function to make an not in operation
+// (e.g. notIn(1, [1, 2, 3]) => false)
+function notIn(num, arr) {
+    return arr.indexOf(num) === -1;
+}
+
+// Add a function to make an is operation
+// (e.g. is(null, null) => true)
+function is(obj1, obj2) {
+    return obj1 === obj2;
+}
+
+// Add a function to make an is not operation
+// (e.g. isNot(null, null) => false)
+function isNot(obj1, obj2) {
+    return obj1 !== obj2;
+}
+
+// Add a function to make an instanceof operation
+// (e.g. instanceOf(new Date(), Date) => true)
+function instanceOf(obj, type) {
+    return obj instanceof type;
+}
+
+// Add a function to make an typeof operation
+// (e.g. typeOf(new Date(), 'object') => true)
+function typeOf(obj, type) {
+    return typeof obj === type;
+}
+
+// Add a function to make an if error operation
+// (e.g. ifError(new Error('foo'), 'foo') => 'foo')
+function ifError(obj, str) {
+    if (obj instanceof Error) {
+        return str;
+    }
+}
+
+// Add a function to make an if not error operation
+// (e.g. ifNotError(new Error('foo'), 'foo') => null)
+function ifNotError(obj, str) {
+    if (!(obj instanceof Error)) {
+        return str;
+    }
+}
+
