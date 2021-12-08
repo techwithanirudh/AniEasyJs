@@ -94,7 +94,7 @@ function ExpandDate(date) {
 
 // Add a function to get the current date
 // (e.g. GetCurrentDate() => '2000-02-29')
-function GetCurrentDate() {
+function Now() {
   return expandDate(new Date());
 }
 
